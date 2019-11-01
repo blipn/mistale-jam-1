@@ -7,6 +7,7 @@ public class PlayersHP : MonoBehaviour
     [SerializeField] private ParticleSystem explosionParticles;
     private bool amDed;
     private Animator animator;
+    [SerializeField] GameObject deathScreen;
 
     private void Start()
     {
@@ -25,8 +26,9 @@ public class PlayersHP : MonoBehaviour
             return;
         amDed = true;
         explosionParticles.Play();
+        Instantiate(deathScreen);
         StartCoroutine(Death());
-        GameManager.Instance.GameOver();
+        //GameManager.Instance.GameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
