@@ -112,4 +112,13 @@ public class PlayerMovement : MonoBehaviour {
             m_canAttack = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("TOUCHEEEEEEEEEED BY ENEMY");
+            //TODO : GAME OVER FROM GAME MANAGER
+        }
+    }
 }

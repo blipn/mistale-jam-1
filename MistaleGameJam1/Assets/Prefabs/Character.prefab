@@ -283,7 +283,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 55
   m_GroundCheck: {fileID: 1988661651499920762}
   m_CeilingCheck: {fileID: 1988661651674830242}
   m_CrouchDisableCollider: {fileID: 1988661650346881321}
@@ -333,6 +333,7 @@ MonoBehaviour:
   effects: {fileID: 0}
   runSpeed: 160
   sfAttack: {fileID: 1398572816}
+  m_AttackSpeed: 0.3
 --- !u!61 &1988661650346881321
 BoxCollider2D:
   m_ObjectHideFlags: 0
