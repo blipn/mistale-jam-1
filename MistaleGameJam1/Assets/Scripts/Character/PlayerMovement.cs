@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour {
                 fieldAttack.enabled = true;
             }
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
 
             animator.SetBool("IsAttacking", false);
             if (fieldAttack != null)
@@ -110,6 +110,15 @@ public class PlayerMovement : MonoBehaviour {
 
             yield return new WaitForSeconds(m_AttackSpeed);
             m_canAttack = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("TOUCHEEEEEEEEEED BY ENEMY");
+            //TODO : GAME OVER FROM GAME MANAGER
         }
     }
 }
