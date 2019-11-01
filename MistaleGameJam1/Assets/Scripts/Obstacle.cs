@@ -27,7 +27,12 @@ public class Obstacle : MonoBehaviour
             return;
         }
         life -= 1;
-        CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
+        
+        if (CameraManager.Instance != null)
+        {
+            CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
+            
+        }
 
         if (life <= 0)
         {
