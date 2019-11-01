@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraShake: {fileID: 937102600249579071}
+  CrowdMovement: {fileID: 937102601209312786}
 --- !u!1 &937102600933046945
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +262,7 @@ GameObject:
   - component: {fileID: 937102601209312790}
   m_Layer: 0
   m_Name: CameraAvecParallax
-  m_TagString: Ennemy
+  m_TagString: BorderCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  scrollEnabled: 1
 --- !u!61 &937102601209312790
 BoxCollider2D:
   m_ObjectHideFlags: 0
