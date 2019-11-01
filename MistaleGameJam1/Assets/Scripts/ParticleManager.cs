@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleSystem : MonoBehaviour
+
+public class ParticleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void Playing()
     {
-        
+
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+
+    }
+
     void Update()
     {
         
