@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playItem;
     [SerializeField] private GameObject menuInGame;
     [SerializeField] private GameObject resumeItem;
-    private string lastLevel = "SceneAlex"; // TODO: LEVEL 1
+    private string lastLevel = "Proto"; // TODO: LEVEL 1
     private bool inGame = false;
     
     // Start is called before the first frame update
@@ -43,12 +43,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    public void LoadProtoScene()
-    {
-        SceneManager.LoadScene("Proto");
-    }
-
 
     void Resume()
     {
@@ -134,10 +128,10 @@ public class GameManager : MonoBehaviour
     
     public void button_Exit()
     {
-        
+        ExitTheGame();
     }
 
-    public void ExitTheGame()
+    private void ExitTheGame()
     {
         Application.Quit();
     }
