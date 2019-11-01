@@ -8,6 +8,7 @@ public class CameraManager : MonoBehaviour
     
     public static CameraManager Instance { get; private set; }
 
+    public CameraJuicy CameraJuicy;
     public CameraShakeClassic CameraShake;
     public CrowdMovement CrowdMovement;
     
