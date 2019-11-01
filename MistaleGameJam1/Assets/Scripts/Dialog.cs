@@ -5,19 +5,19 @@ using TMPro;
 
 public class Dialog : MonoBehaviour
 {
-    public TextMeshProUGUI textDisplay;
-    public string[] sentences;
-    private int index;
-    public float typingSpeed;
-    private bool activatedOnce=false;
-    private int startIndex;
+    [SerializeField] private bool activatedOnce=false;
+
+    public GameObject continueButton;
     private int endIndex;
+    private int index;
+    public PlayerMovement playerMovement;
+    public string[] sentences;
 
     private GameObject speaker1;
     private GameObject speaker2;
-
-    public GameObject continueButton;
-    public PlayerMovement playerMovement;
+    private int startIndex;
+    public TextMeshProUGUI textDisplay;
+    public float typingSpeed;
 
     private void Update()
     {
@@ -32,7 +32,7 @@ public class Dialog : MonoBehaviour
         }
     }
 
-    IEnumerator Type()
+    private IEnumerator Type()
     {
         foreach(char letter in sentences[this.startIndex].ToCharArray())
         {
@@ -41,7 +41,8 @@ public class Dialog : MonoBehaviour
         }
     }
 
-    public void StartDialog(int dialogStartIndex, int dialogEndIndex, GameObject interlocuteur1, GameObject interlocuteur2)
+    public void StartDialog(int dialogStartIndex, int dialogEndIndex, GameObject interlocuteur1, 
+        GameObject interlocuteur2)
     {
         this.startIndex = dialogStartIndex;
         this.endIndex = dialogEndIndex;
@@ -52,6 +53,7 @@ public class Dialog : MonoBehaviour
         StartCoroutine(Type());
     }
 
+    //TODO Gérer cas du startindex impair, modulo est pas ouf
     public void NextSentence()
     {
         continueButton.SetActive(false);
@@ -81,5 +83,4 @@ public class Dialog : MonoBehaviour
             this.speaker2.SetActive(false);
         }
     }
-
 }
