@@ -90,11 +90,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7207589528306244278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c0ff70cbe4b3e43bb5685cd7bf0d79, type: 3}
+  m_Script: {fileID: 11500000, guid: 379540604da7cd4488ab7575627ddb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 3852081840106534144}
   life: 2
+  intensityShake: 1
+  durationShake: 0.1
 --- !u!61 &7207589528306244279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,11 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7207589528306244274}
     m_Modifications:
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228964baee558d74a8cf80eceda94ac3, type: 3}

@@ -8,17 +8,22 @@ public class Obstacle : MonoBehaviour
     [SerializeField] ParticleSystem explosionParticles;
     private bool hasPlayed;
     public int life = 2;
-    
+
     IEnumerator uDed()
     {
         yield return new WaitForSeconds(.1f);
         Destroy(gameObject);
     }
 
+
+    public float intensityShake = 1f;
+    public float durationShake = 0.1f;
+   
     public void Hit()
     {
         life -= 1;
-        //CameraManager.Instance.CameraShake.Shake();
+        CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
+
         if (life <= 0)
         {
             Die();
