@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,7 +15,12 @@ public class GameManager : MonoBehaviour
 
     private static bool isPaused = true;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject playItem;
+    [SerializeField] private GameObject menuInGame;
+    [SerializeField] private GameObject resumeItem;
     private string lastLevel = "SceneAlex"; // TODO: LEVEL 1
+    private bool inGame = false;
     
     // Start is called before the first frame update
     void Start()
@@ -59,24 +65,49 @@ public class GameManager : MonoBehaviour
 
     private void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void NewGame()
     {
         ToLevel(lastLevel);
+        switchInGame(true);
+    }
+    
+    private void switchInGame(bool value)
+    {
+        inGame = value;
+        if (inGame)
+        {
+            menu.SetActive(false);
+            menuInGame.SetActive(true);
+            resumeItem.GetComponent<Button>().Select();
+        }
+        else
+        {
+            menuInGame.SetActive(false);
+            menu.SetActive(true);
+            playItem.GetComponent<Button>().Select();
+        }
     }
     
     private void ToLevel(string sceneName)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-        Resume();
+        if (!inGame)
+        {
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+            Resume();
+        }
+        else
+        {
+            ReloadScene();
+        }
     }
-    
-    public IEnumerator selector(Action method)
+
+    private IEnumerator selector(Action method)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0f); // TODO: mettre 0.1f ?
         method.Invoke();
     }
 
@@ -85,9 +116,19 @@ public class GameManager : MonoBehaviour
         StartCoroutine(selector(NewGame));
     }
     
+    public void button_Resume()
+    {
+        Resume();
+    }
+    
     public void button_Reset()
     {
-        StartCoroutine(selector(ReloadScene));
+        StartCoroutine(selector(GameOver));
     }
-
+    
+    public void button_Exit()
+    {
+        
+    }
+    
 }
