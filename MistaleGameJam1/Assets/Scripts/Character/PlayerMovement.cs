@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
     public Animator animator;
-    public CircleCollider2D fieldAttack;
+    public BoxCollider2D fieldAttack;
     public GameObject effects;
 
     public float runSpeed = 40f;
@@ -17,10 +17,13 @@ public class PlayerMovement : MonoBehaviour {
     bool crouch = false;
     bool m_stopMove = false;
     Rigidbody2D m_rgPlayer;
+    bool m_canAttack = true;
+    [SerializeField] float m_AttackSpeed = 0.3f;
 
     private void Start()
     {
         m_rgPlayer = gameObject.GetComponent<Rigidbody2D>();
+        fieldAttack.enabled = false;
     }
 
     // Update is called once per frame
@@ -30,6 +33,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
@@ -38,19 +43,8 @@ public class PlayerMovement : MonoBehaviour {
 
             if (Input.GetButtonDown("Fire1"))
             {
-                animator.SetBool("IsAttacking", true);
-                if (fieldAttack != null && !animator.GetBool("IsJumping"))
-                {
-                    sfAttack.Play();
-                    fieldAttack.enabled = true;
-                }
-            }
-            else if (Input.GetButtonUp("Fire1"))
-            {
-                animator.SetBool("IsAttacking", false);
-                StartCoroutine(GoAfterAttack());
-                if (fieldAttack != null)
-                    fieldAttack.enabled = false;
+                if(!crouch)
+                    StartCoroutine(Attack());
             }
 
             if (Input.GetButtonDown("Crouch"))
@@ -95,9 +89,27 @@ public class PlayerMovement : MonoBehaviour {
         jump = false;
     }
 
-    IEnumerator GoAfterAttack()
+    IEnumerator Attack()
     {
-        yield return new WaitForSeconds(0.4f);
-        runSpeed = 120f;
+        if (m_canAttack)
+        {
+            m_canAttack = false;
+
+            animator.SetBool("IsAttacking", true);
+            if (fieldAttack != null)
+            {
+                sfAttack.Play();
+                fieldAttack.enabled = true;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+
+            animator.SetBool("IsAttacking", false);
+            if (fieldAttack != null)
+                fieldAttack.enabled = false;
+
+            yield return new WaitForSeconds(m_AttackSpeed);
+            m_canAttack = true;
+        }
     }
 }
