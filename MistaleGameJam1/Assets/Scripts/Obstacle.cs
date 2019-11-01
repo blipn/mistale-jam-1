@@ -6,14 +6,15 @@ public class Obstacle : MonoBehaviour
 {
      
     [SerializeField] ParticleSystem explosionParticles;
-    private bool hasPlayed;
+    private bool isDed;
     public int life = 2;
 
     IEnumerator uDed()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         Destroy(gameObject);
     }
+    
 
 
     public float intensityShake = 1f;
@@ -21,6 +22,10 @@ public class Obstacle : MonoBehaviour
    
     public void Hit()
     {
+        if (isDed)
+        {
+            return;
+        }
         life -= 1;
         CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
 
@@ -30,9 +35,11 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    public void Die()
+    private void Die()
     {
+        isDed = true;
         explosionParticles.Play();
+//        CameraManager.Instance.CameraJuicy.rotation(-3f, .2f);
         StartCoroutine(uDed());
         
     }

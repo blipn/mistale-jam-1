@@ -261,6 +261,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 937102600249579042, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102600249579042, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102600249579042, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6420958590738517335, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,8 +311,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 937102600852800052, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: CameraJuicy
+      value: 
+      objectReference: {fileID: 727528621}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbdcc28e98efe4e43830fdacd356562b, type: 3}
+--- !u!1 &727528620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 937102600852800053, guid: fbdcc28e98efe4e43830fdacd356562b,
+    type: 3}
+  m_PrefabInstance: {fileID: 727528619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &727528621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727528620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce423adb4e75e4fa2fa690fb8ac1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306967626
 GameObject:
   m_ObjectHideFlags: 0
