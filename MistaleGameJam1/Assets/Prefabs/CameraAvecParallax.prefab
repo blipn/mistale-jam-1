@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 937102601209312790}
   m_Layer: 0
   m_Name: CameraAvecParallax
-  m_TagString: Ennemy
+  m_TagString: BorderCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
