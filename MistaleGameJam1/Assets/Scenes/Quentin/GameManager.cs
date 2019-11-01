@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
 {
     private static bool isPaused = true;
     [SerializeField] private GameObject pauseMenu;
-    
+    static public GameManager Instance;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    static void GameOver()
+    public void GameOver()
     {
         
     }
