@@ -17,6 +17,7 @@ public class PlayersHP : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(1f);
+        DeathDetector.isPlayerDed = true;
         Destroy(gameObject);
     }
 
