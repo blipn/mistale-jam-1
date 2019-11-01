@@ -318,11 +318,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1306967626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c0ff70cbe4b3e43bb5685cd7bf0d79, type: 3}
+  m_Script: {fileID: 11500000, guid: 379540604da7cd4488ab7575627ddb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 0}
   life: 300
+  intensityShake: 1
+  durationShake: 0.1
 --- !u!114 &1475386117 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5285552069202406944, guid: 9deab73cdc608874dbd424c07013d160,
