@@ -12,7 +12,14 @@ public class Obstacle : MonoBehaviour
         CameraManager.Instance.CameraShake.Shake(0.2f, 0.1f);
         if (life <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        //TODO : Ajouter les effets d'explosion
+        Destroy(gameObject);
+        
     }
 }
