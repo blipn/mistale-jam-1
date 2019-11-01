@@ -9,7 +9,7 @@ public class Obstacle : MonoBehaviour
     public void Hit()
     {
         life -= 1;
-        CameraManager.Instance.CameraShake.Shake(0.2f, 0.1f);
+        CameraManager.Instance.CameraShake.Shake();
         if (life <= 0)
         {
             Die();
