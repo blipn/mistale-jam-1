@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1398572814}
   - component: {fileID: 1398572816}
   - component: {fileID: 1398572815}
+  - component: {fileID: 447600362}
   m_Layer: 8
   m_Name: FieldAttack
   m_TagString: Untagged
@@ -141,7 +142,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.730262, y: -2.6590624}
+  m_Offset: {x: 5.7722344, y: -3.0250826}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -152,8 +153,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.460522, y: 16.499353}
+  m_Size: {x: 4.334756, y: 4.5484867}
   m_EdgeRadius: 0
+--- !u!114 &447600362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398572813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190f676071ae1394a9a4a6d84e8ac505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988661650346881491
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 1988661650346881491}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 3.7860172, y: 2.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1988661651674830242}
   - {fileID: 1988661651499920762}
@@ -234,8 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2477357268821908866, guid: 7f2c13ebc57183d4095b99d14fb1025a,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c2849c38952b05458ae0b45704b0237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -277,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5827e5bfed10a846bbcb8fcf46b6fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 2000
+  m_JumpForce: 1800
   m_CrouchSpeed: 1
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -331,7 +343,7 @@ MonoBehaviour:
   animator: {fileID: 1988661650346881324}
   fieldAttack: {fileID: 1398572815}
   effects: {fileID: 0}
-  runSpeed: 160
+  runSpeed: 100
   sfAttack: {fileID: 1398572816}
   m_AttackSpeed: 0.3
 --- !u!61 &1988661650346881321
@@ -347,18 +359,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1597488, y: 3.3246627}
+  m_Offset: {x: -0.17283535, y: 0.15391254}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.12, y: 0.95, z: 2.72, w: 0.41}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.9602237, y: 18.07}
+    oldSize: {x: 7.25, y: 7.25}
     newSize: {x: 7.9602237, y: 18.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.3284082, y: 11.204867}
+  m_Size: {x: 2.060316, y: 3.5586138}
   m_EdgeRadius: 0
 --- !u!58 &1988661650346881320
 CircleCollider2D:
@@ -373,9 +385,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.105014324, y: -4.336504}
+  m_Offset: {x: -0.23216367, y: -1.765523}
   serializedVersion: 2
-  m_Radius: 3.5586057
+  m_Radius: 0.8735595
 --- !u!50 &1988661650346881327
 Rigidbody2D:
   serializedVersion: 4
