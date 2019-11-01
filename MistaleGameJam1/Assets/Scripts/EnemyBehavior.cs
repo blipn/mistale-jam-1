@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
-     
+    //Il doit faire des dégâts au joueur, il doit avoir des mouvements propres, w/ rigidbody et tout le tralala
+
     [SerializeField] ParticleSystem explosionParticles;
-    private bool hasPlayed;
-    public int life = 2;
-    
+    private float life = 1;
+
     IEnumerator uDed()
     {
         yield return new WaitForSeconds(.1f);
@@ -25,9 +25,22 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    public void Die()
+    void Die()
     {
         explosionParticles.Play();
         StartCoroutine(uDed());
     }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        
+    }
 }
+

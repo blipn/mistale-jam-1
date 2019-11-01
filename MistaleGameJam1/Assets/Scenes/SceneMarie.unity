@@ -203,7 +203,13 @@ PrefabInstance:
       propertyPath: lengthInSec
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9122304484180593853, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 125
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9122304484180593851, guid: 228964baee558d74a8cf80eceda94ac3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 228964baee558d74a8cf80eceda94ac3, type: 3}
 --- !u!1 &609032600
 GameObject:
@@ -374,6 +380,11 @@ PrefabInstance:
       propertyPath: explosionParticles
       value: 
       objectReference: {fileID: 322412705}
+    - target: {fileID: 3852081840106534147, guid: bc131c7b52144104b8e2214ab5f75e52,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc131c7b52144104b8e2214ab5f75e52, type: 3}
 --- !u!114 &1423699630 stripped
