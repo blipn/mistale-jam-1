@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
@@ -9,21 +7,25 @@ public class Parallax : MonoBehaviour
     public float parallaxEffect;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         startpos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect));
-        float dist = (cam.transform.position.x * parallaxEffect);
+        var position = cam.transform.position;
+        float temp = (position.x * (1 - parallaxEffect));
+        float dist = (position.x * parallaxEffect);
 
-        transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
+        var transform1 = transform;
+        var position1 = transform1.position;
+        position1 = new Vector3(startpos + dist, position1.y, position1.z);
+        transform1.position = position1;
 
-        if (temp > startpos + length) startpos += length;
+        if (temp > startpos + length * 0.8) startpos += length;
         else if (temp < startpos - length) startpos -= length;
     }
 }
