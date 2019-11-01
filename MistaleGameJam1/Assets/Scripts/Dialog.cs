@@ -9,7 +9,9 @@ public class Dialog : MonoBehaviour
 
     public GameObject continueButton;
     private int endIndex;
-    private int index;
+    private int indexMax;
+    private int indexMini;
+    private bool isScrollingPanel = false;
     public PlayerMovement playerMovement;
     public string[] sentences;
 
@@ -42,28 +44,31 @@ public class Dialog : MonoBehaviour
     }
 
     public void StartDialog(int dialogStartIndex, int dialogEndIndex, GameObject interlocuteur1, 
-        GameObject interlocuteur2)
+        GameObject interlocuteur2, bool isScrollingStarterPanel)
     {
         this.startIndex = dialogStartIndex;
         this.endIndex = dialogEndIndex;
         this.speaker1 = interlocuteur1;
         this.speaker2 = interlocuteur2;
+        this.indexMini = 0;
+        this.indexMax = endIndex - startIndex;
         this.speaker1.SetActive(true);
+        this.isScrollingPanel = isScrollingStarterPanel;
         playerMovement.StopMove();
         StartCoroutine(Type());
     }
 
-    //TODO Gérer cas du startindex impair, modulo est pas ouf
     public void NextSentence()
     {
         continueButton.SetActive(false);
 
-        if (this.startIndex < this.endIndex)
+        if (indexMini < indexMax)
         {
-            this.startIndex++;
+            startIndex++;
+            indexMini++;
             textDisplay.text = "";
             StartCoroutine(Type());
-            if (startIndex % 2 == 1)
+            if (indexMini % 2 == 1)
             {
                 this.speaker1.SetActive(false);
                 this.speaker2.SetActive(true);
@@ -81,6 +86,13 @@ public class Dialog : MonoBehaviour
             continueButton.SetActive(false);
             this.speaker1.SetActive(false);
             this.speaker2.SetActive(false);
+
+            if (isScrollingPanel)
+            {
+                //Todo lancer la seconde partie du jeu en scrolling
+                // desactiver la camera simple pour la camera parallax
+                // lancer nouvelle scene ?
+            }
         }
     }
 }

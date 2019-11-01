@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class Panel : MonoBehaviour
 {
     private bool activatedOnce = false;
+    public bool isScrollingStarterPanel;
     public int dialogEndIndex;
     public Dialog dialogManager;
     public int dialogStartIndex;
@@ -16,7 +17,7 @@ public class Panel : MonoBehaviour
     {
         if (activatedOnce == false)
         {
-            dialogManager.StartDialog(dialogStartIndex, dialogEndIndex, interlocuteur1, interlocuteur2);
+            dialogManager.StartDialog(dialogStartIndex, dialogEndIndex, interlocuteur1, interlocuteur2, isScrollingStarterPanel);
             activatedOnce = true;
         }
     }
