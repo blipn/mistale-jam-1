@@ -26,12 +26,12 @@ public class PlayersHP : MonoBehaviour
         amDed = true;
         explosionParticles.Play();
         StartCoroutine(Death());
-        //GameManager.Instance.GameOver();
+        GameManager.Instance.GameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && !animator.GetBool("IsAttacking"))
+        if ((collision.CompareTag("Enemy")  && !animator.GetBool("IsAttacking")) || collision.CompareTag("BorderCamera"))
         {
             uDed();
         }
