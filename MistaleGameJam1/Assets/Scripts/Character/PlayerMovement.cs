@@ -12,8 +12,6 @@ public class PlayerMovement : MonoBehaviour {
     public float runSpeed = 40f;
     public AudioSource sfAttack;
 
-    public GameObject inventory;
-
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
@@ -32,18 +30,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
                 animator.SetBool("IsJumping", true);
             }
 
-            if (Input.GetButtonDown("Fire1") && !inventory.activeSelf)
+            if (Input.GetButtonDown("Fire1"))
             {
                 animator.SetBool("IsAttacking", true);
-                runSpeed = 0;
                 if (fieldAttack != null && !animator.GetBool("IsJumping"))
                 {
                     sfAttack.Play();
