@@ -10,15 +10,15 @@ public class ClickAction : MonoBehaviour
         
     }
 
-    public CameraShake CameraShake;
+    public Obstacle Obstacle;
     
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            
-            StartCoroutine(CameraShake.Shake(.15f, .4f));
+            Obstacle.Hit();
+//            StartCoroutine(CameraShake.Shake(.15f, .4f));
         }
     }
 }

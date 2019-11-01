@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public IEnumerator Shake(float duration, float magnitude)
+    public void Shake(float duration, float magnitude)
+    {
+        StartCoroutine(ShakeCamera(duration, magnitude));
+    }
+    
+    public IEnumerator ShakeCamera(float duration, float magnitude)
     {
         Vector3 originalPos = transform.localPosition;
         float elapsed = 0f;
