@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour
     
     public static CameraManager Instance { get; private set; }
 
-    public CameraShake CameraShake;
+    public CameraShakeClassic CameraShake;
     
     private void Awake()
     {
