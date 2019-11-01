@@ -8,13 +8,16 @@ public class Panel : MonoBehaviour
     private bool activatedOnce = false;
     public int dialogStartIndex;
     public int dialogEndIndex;
+    public GameObject interlocuteur1;
+    public GameObject interlocuteur2;
+    
 
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (activatedOnce == false)
         {
-            DialogManager.StartDialog(dialogStartIndex, dialogEndIndex);
+            DialogManager.StartDialog(dialogStartIndex, dialogEndIndex, interlocuteur1, interlocuteur2);
             activatedOnce = true;
         }
     }
