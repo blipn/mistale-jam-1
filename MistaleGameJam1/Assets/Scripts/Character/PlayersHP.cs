@@ -5,11 +5,7 @@ using UnityEngine;
 public class PlayersHP : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosionParticles;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool amDed;
 
     IEnumerator Death()
     {
@@ -19,13 +15,21 @@ public class PlayersHP : MonoBehaviour
 
     private void uDed()
     {
+        if (amDed)
+            return;
         explosionParticles.Play();
+        Debug.Log("BOOM !!");
         StartCoroutine(Death());
+        //GameManager.Instance.GameOver();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
+        if (collision.CompareTag("Enemy"))
+        {
+            Debug.Log("i ma touché ;(");
+            uDed();
+        }
     }
 }
