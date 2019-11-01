@@ -9,17 +9,16 @@ public class Dialog : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
+    private bool activatedOnce=false;
+    private int startIndex;
+    private int endIndex;
 
     public GameObject continueButton;
-
-    private void Start()
-    {
-        StartCoroutine(Type());
-    }
+    public PlayerMovement playerMovement;
 
     private void Update()
     {
-        if (textDisplay.text == sentences[index])
+        if (textDisplay.text == sentences[this.startIndex])
         {
             continueButton.SetActive(true);
         }
@@ -27,22 +26,27 @@ public class Dialog : MonoBehaviour
 
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach(char letter in sentences[this.startIndex].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
-
         }
+    }
+
+    public void StartDialog(int dialogStartIndex, int dialogEndIndex)
+    {
+        this.startIndex = dialogStartIndex;
+        this.endIndex = dialogEndIndex;
+        StartCoroutine(Type());
     }
 
     public void NextSentence()
     {
-
         continueButton.SetActive(false);
 
-        if (index < sentences.Length - 1)
+        if (this.startIndex < this.endIndex)
         {
-            index++;
+            this.startIndex++;
             textDisplay.text = "";
             StartCoroutine(Type());
         }
@@ -52,4 +56,5 @@ public class Dialog : MonoBehaviour
             continueButton.SetActive(false);
         }
     }
+
 }
