@@ -37,6 +37,7 @@ public class Dialog : MonoBehaviour
     {
         this.startIndex = dialogStartIndex;
         this.endIndex = dialogEndIndex;
+        playerMovement.StopMove();
         StartCoroutine(Type());
     }
 
@@ -54,6 +55,7 @@ public class Dialog : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+            playerMovement.GoMove();
         }
     }
 
