@@ -44,6 +44,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoadProtoScene()
+    {
+        SceneManager.LoadScene("Proto");
+    }
+
+
     void Resume()
     {
         isPaused = false;
@@ -129,6 +135,11 @@ public class GameManager : MonoBehaviour
     public void button_Exit()
     {
         
+    }
+
+    public void ExitTheGame()
+    {
+        Application.Quit();
     }
     
     public void select_Resume()
