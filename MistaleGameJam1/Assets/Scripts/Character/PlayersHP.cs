@@ -6,10 +6,16 @@ public class PlayersHP : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosionParticles;
     private bool amDed;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     IEnumerator Death()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 
@@ -17,18 +23,16 @@ public class PlayersHP : MonoBehaviour
     {
         if (amDed)
             return;
+        amDed = true;
         explosionParticles.Play();
-        Debug.Log("BOOM !!");
         StartCoroutine(Death());
         //GameManager.Instance.GameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !animator.GetBool("IsAttacking"))
         {
-            Debug.Log("i ma touché ;(");
             uDed();
         }
     }
