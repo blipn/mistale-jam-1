@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        {/*
             if (isPaused)
             {
                 Resume();
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 Pause();
-            }
+            }*/
         }
     }
 
