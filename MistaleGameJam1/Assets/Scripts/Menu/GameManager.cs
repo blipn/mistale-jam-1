@@ -131,4 +131,14 @@ public class GameManager : MonoBehaviour
         
     }
     
+    public void select_Resume()
+    {
+        resumeItem.GetComponent<Button>().Select();
+    }    
+    
+    public void select_Play()
+    {
+        playItem.GetComponent<Button>().Select();
+    }
+    
 }
