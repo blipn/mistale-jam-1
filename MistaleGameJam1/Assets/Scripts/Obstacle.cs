@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
     public void Hit()
     {
         life -= 1;
-        CameraManager.Instance.CameraShake.Shake();
+        //CameraManager.Instance.CameraShake.Shake();
         if (life <= 0)
         {
             Die();
@@ -29,5 +29,6 @@ public class Obstacle : MonoBehaviour
     {
         explosionParticles.Play();
         StartCoroutine(uDed());
+        
     }
 }

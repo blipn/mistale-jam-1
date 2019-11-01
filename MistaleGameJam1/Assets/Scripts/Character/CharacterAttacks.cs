@@ -10,9 +10,5 @@ public class CharacterAttacks : MonoBehaviour
         {
             collision.GetComponent<Obstacle>().Hit();
         }
-        if (collision.tag =="Enemy")
-        {
-            collision.GetComponent<EnemyBehavior>().Hit();//to ranger
-        }
     }
 }

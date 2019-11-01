@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("TOUCHEEEEEEEEEED BY ENEMY");
-            GameManager.Instance.GameOver();
+            //TODO : GAME OVER FROM GAME MANAGER
         }
     }
 }
