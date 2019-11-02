@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 937102600249579068}
   - component: {fileID: 937102600249579069}
   - component: {fileID: 937102600249579071}
+  - component: {fileID: 8720507700395636806}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -96,6 +97,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1beef69e6c87d1c49a93fd10b77e989c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8720507700395636806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937102600249579043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce423adb4e75e4fa2fa690fb8ac1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937102600852800053
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48185b86c9141c74487a4a4fbe23d4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraJuicy: {fileID: 0}
+  CameraJuicy: {fileID: 8720507700395636806}
   CameraShake: {fileID: 937102600249579071}
   CrowdMovement: {fileID: 937102601209312786}
 --- !u!1 &937102600933046945
