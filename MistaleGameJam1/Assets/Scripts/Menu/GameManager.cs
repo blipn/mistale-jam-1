@@ -94,7 +94,8 @@ public class GameManager : MonoBehaviour
     private void ReloadScene()
     {
         Resume();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.UnloadSceneAsync(lastLevel);
+        SceneManager.LoadScene(lastLevel, LoadSceneMode.Additive);
     }
 
     private void NewGame()
@@ -156,7 +157,7 @@ public class GameManager : MonoBehaviour
     
     public void button_Exit()
     {
-        ExitTheGame();
+        SceneManager.LoadScene("Menu");
     }    
     
     public void button_Replay()
@@ -166,7 +167,7 @@ public class GameManager : MonoBehaviour
         button_Play();
     }
 
-    private void ExitTheGame()
+    public void ExitTheGame()
     {
         Application.Quit();
     }

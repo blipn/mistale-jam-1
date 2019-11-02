@@ -494,7 +494,7 @@ PrefabInstance:
     - target: {fileID: 6105491320843801784, guid: 1c389100b8a0fd94b81197f1ee4139c0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: button_Reset
+      value: button_Exit
       objectReference: {fileID: 0}
     - target: {fileID: 6105491320843801784, guid: 1c389100b8a0fd94b81197f1ee4139c0,
         type: 3}
@@ -524,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 6105491321719252327, guid: 1c389100b8a0fd94b81197f1ee4139c0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: button_Exit
+      value: ExitTheGame
       objectReference: {fileID: 0}
     - target: {fileID: 6105491321719252327, guid: 1c389100b8a0fd94b81197f1ee4139c0,
         type: 3}
