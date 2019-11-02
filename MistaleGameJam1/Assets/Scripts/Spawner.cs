@@ -44,8 +44,7 @@ public class Spawner : MonoBehaviour
 
     private void RandomList()
     {
-//        int choice = Random.Range(0, 3);
-        int choice = 3;
+        int choice = Random.Range(0, 4);
         switch (choice)
         {
             case 0:

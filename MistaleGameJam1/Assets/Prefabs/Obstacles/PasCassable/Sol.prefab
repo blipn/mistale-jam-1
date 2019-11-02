@@ -187,8 +187,9 @@ GameObject:
   - component: {fileID: 7207589528306244274}
   - component: {fileID: 7207589528306244279}
   - component: {fileID: 5632350445474730349}
+  - component: {fileID: -7263830397153739088}
   m_Layer: 0
-  m_Name: Rocher 1
+  m_Name: Sol
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,6 +286,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7263830397153739088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7207589528306244278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2193e7ad43022c4f9a1f11c25110a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensityShake: 1.5
+  durationShake: 0.2
+  explosionParticles: {fileID: 3852081840106534144, guid: d4e350f466137b44db1cbce82c40a661,
+    type: 3}
 --- !u!1001 &5471231014070254013
 PrefabInstance:
   m_ObjectHideFlags: 0

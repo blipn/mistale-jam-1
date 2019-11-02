@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5872967985394373115}
   - component: {fileID: 40868290838135272}
   - component: {fileID: 2549209784567145172}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6548183529733247657}
   - component: {fileID: 3561856846819029759}
   - component: {fileID: 1989079425393683954}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,9 +188,9 @@ GameObject:
   - component: {fileID: 4215459789963186190}
   - component: {fileID: 7207589528306244279}
   - component: {fileID: 5632350445474730349}
-  m_Layer: 9
-  m_Name: Enemy 4
-  m_TagString: Enemy
+  m_Layer: 10
+  m_Name: Baril
+  m_TagString: BorderCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 7207589528306244278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3852081840106534147}
   - {fileID: 6612100104792341769}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityShake: 1.5
-  durationShake: 0.2
+  durationShake: 0.1
   explosionParticles: {fileID: 3852081840106534144}
 --- !u!61 &7207589528306244279
 BoxCollider2D:
@@ -241,16 +241,16 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 7.69}
+    oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 7.9}
+  m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
 --- !u!212 &5632350445474730349
 SpriteRenderer:
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 582d2b2fcae87dd4aa6627ba09290186, type: 3}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -316,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
