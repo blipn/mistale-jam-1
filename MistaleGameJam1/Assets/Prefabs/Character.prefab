@@ -694,6 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5aa340f3c4bc7844a7efc97cbee1f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeAfterDeath: 1
   explosionParticles: {fileID: 5886102889624552892}
 --- !u!82 &2018924921
 AudioSource:
@@ -954,6 +955,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1988661650346881326}
     m_Modifications:
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1009,11 +1015,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228964baee558d74a8cf80eceda94ac3, type: 3}
 --- !u!4 &5886102889624552895 stripped
@@ -1035,6 +1036,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1988661650346881326}
     m_Modifications:
+    - target: {fileID: 6266899150948209068, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Jump
+      objectReference: {fileID: 0}
     - target: {fileID: 6266899150948209057, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1089,11 +1095,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266899150948209068, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 6266899150948209058, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
         type: 3}
