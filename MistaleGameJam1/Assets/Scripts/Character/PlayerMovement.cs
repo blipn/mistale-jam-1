@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
     public Animator animator;
+    public Animator animAttack;
     public BoxCollider2D fieldAttack;
     public GameObject effects;
 
@@ -96,6 +97,7 @@ public class PlayerMovement : MonoBehaviour {
             m_canAttack = false;
 
             animator.SetBool("IsAttacking", true);
+            animAttack.SetBool("IsAttacking", true);
             if (fieldAttack != null)
             {
                 sfAttack.Play();
@@ -105,6 +107,7 @@ public class PlayerMovement : MonoBehaviour {
             yield return new WaitForSeconds(0.2f);
 
             animator.SetBool("IsAttacking", false);
+            animAttack.SetBool("IsAttacking", false);
             if (fieldAttack != null)
                 fieldAttack.enabled = false;
 
