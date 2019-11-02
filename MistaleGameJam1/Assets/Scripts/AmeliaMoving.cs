@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,22 +35,17 @@ public class AmeliaMoving : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "death")
+        if (other.tag == "ameliaVulnerable")
         {
-            spr.flipX = true;
-            end = true;
+            gameObject.tag = "Obstacle";
         }
+    }
 
-        if (collision.gameObject.tag == "death2" && !end)
-        {
-            explosion.Play();
-            SaveLoad.Save("Proto");
-            GameManager.Instance.button_Play();
-        }
-        
-
-        
+    private void OnDestroy()
+    {
+        SaveLoad.Save("Proto");
+        GameManager.Instance.button_Play();
     }
 }

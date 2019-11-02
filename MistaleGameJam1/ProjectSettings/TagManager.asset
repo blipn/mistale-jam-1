@@ -10,6 +10,7 @@ TagManager:
   - BorderCamera
   - death
   - death2
+  - ameliaVulnerable
   layers:
   - Default
   - TransparentFX

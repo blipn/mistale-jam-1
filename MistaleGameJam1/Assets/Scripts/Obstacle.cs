@@ -11,7 +11,7 @@ public class Obstacle : MonoBehaviour
 
     IEnumerator uDed()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(durationShake);
         Destroy(gameObject);
     }
     
