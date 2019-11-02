@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    
+    [SerializeField] private ParticleSystem jumpParticule;
     public CharacterController2D controller;
     public Animator animator;
     public Animator animAttack;
     public BoxCollider2D fieldAttack;
-    public GameObject effects;
 
     public float runSpeed = 40f;
     public AudioSource sfAttack;
@@ -20,7 +21,6 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D m_rgPlayer;
     bool m_canAttack = true;
     [SerializeField] float m_AttackSpeed = 0.3f;
-
     private void Start()
     {
         m_rgPlayer = gameObject.GetComponent<Rigidbody2D>();
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 jump = true;
                 animator.SetBool("IsJumping", true);
+                jumpParticule.Play();
             }
 
             if (Input.GetButtonDown("Fire1"))
