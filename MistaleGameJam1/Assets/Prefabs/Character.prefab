@@ -517,13 +517,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 5196229882351199232, guid: 1376809dfc5ec9546b8fe368102df3ed,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c2849c38952b05458ae0b45704b0237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.4410498, y: 6}
+  m_Size: {x: 7.25, y: 7.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -635,10 +634,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.17283535, y: 0.15391254}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.12, y: 0.95, z: 2.72, w: 0.41}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.202197, y: 7.2}
-    newSize: {x: 3.4410498, y: 6}
+    oldSize: {x: 7.25, y: 7.25}
+    newSize: {x: 7.25, y: 7.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -955,11 +954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1988661650346881326}
     m_Modifications:
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1015,6 +1009,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228964baee558d74a8cf80eceda94ac3, type: 3}
 --- !u!4 &5886102889624552895 stripped
@@ -1036,11 +1035,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1988661650346881326}
     m_Modifications:
-    - target: {fileID: 6266899150948209068, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Jump
-      objectReference: {fileID: 0}
     - target: {fileID: 6266899150948209057, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1096,10 +1090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6266899150948209058, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
+    - target: {fileID: 6266899150948209068, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 5
+      propertyPath: m_Name
+      value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 6266899150948209058, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
         type: 3}
@@ -1120,6 +1114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266899150948209058, guid: 1a0fde00ad01a60468340d9eedb2aa0e,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a0fde00ad01a60468340d9eedb2aa0e, type: 3}
