@@ -17,12 +17,15 @@ public class EnemyBehavior : MonoBehaviour
 
     public void Hit()
     {
-        life -= 1;
-        //CameraManager.Instance.CameraShake.Shake();
-        if (life <= 0)
+        if(gameObject.tag != "BorderCamera")
         {
-            Die();
-        }
+            life -= 1;
+            //CameraManager.Instance.CameraShake.Shake();
+            if (life <= 0)
+            {
+                Die();
+            }
+        }        
     }
 
     void Die()
