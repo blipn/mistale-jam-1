@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Obstacle
   - BorderCamera
+  - death
+  - death2
   layers:
   - Default
   - TransparentFX

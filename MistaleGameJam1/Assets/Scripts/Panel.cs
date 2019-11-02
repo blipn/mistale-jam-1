@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 public class Panel : MonoBehaviour
 {
-    private bool activatedOnce = false;
+    private bool activatedOnce;
     public bool isScrollingStarterPanel;
     public int dialogEndIndex;
     public Dialog dialogManager;
@@ -15,7 +15,7 @@ public class Panel : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (activatedOnce == false)
+        if (!activatedOnce)
         {
             dialogManager.StartDialog(dialogStartIndex, dialogEndIndex, interlocuteur1, interlocuteur2, isScrollingStarterPanel);
             activatedOnce = true;
