@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour {
     public CharacterController2D controller;
     public Animator animator;
     public Animator animAttack;
+    public Animator animJump;
     public BoxCollider2D fieldAttack;
-    public Animator jumpAnimator;
     
     public float runSpeed = 40f;
 
@@ -45,16 +45,8 @@ public class PlayerMovement : MonoBehaviour {
 
             if (Input.GetButtonDown("Jump"))
             {
-                jump = true;
-                animator.SetBool("IsJumping", true);
+                StartCoroutine(Jump());
 
-                if (canPlayJump)
-                {
-                    canPlayJump = false;
-                    sfJump.Play();
-                    jumpParticule.Play();
-                    jumpAnimator.Play("jumpAnimation");
-                }
             }
 
             if (Input.GetButtonDown("Fire1"))
@@ -132,6 +124,25 @@ public class PlayerMovement : MonoBehaviour {
             yield return new WaitForSeconds(m_AttackSpeed);
             m_canAttack = true;
             sfAttack.mute = false;
+        }
+    }
+    
+    IEnumerator Jump()
+    {
+        jump = true;
+        animator.SetBool("IsJumping", true);
+
+        if (canPlayJump)
+        {
+            canPlayJump = false;
+            sfJump.Play();
+            jumpParticule.Play();
+            animJump.SetBool("IsJumping", true);
+
+            yield return new WaitForSeconds(0.2f);
+            animJump.SetBool("IsJumping", false);
+
+
         }
     }
 }
