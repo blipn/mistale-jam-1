@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 1988661650346881322, guid: cab4b7ffade0eb445875dffb1c76b42b,
+        type: 3}
+      propertyPath: runSpeed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 1988661650346881326, guid: cab4b7ffade0eb445875dffb1c76b42b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,11 +197,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3440971055145016929, guid: 9cf637d0d1edf414fac3cd2f262de327,
         type: 3}
-    - target: {fileID: 1988661650346881322, guid: cab4b7ffade0eb445875dffb1c76b42b,
-        type: 3}
-      propertyPath: runSpeed
-      value: 250
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab4b7ffade0eb445875dffb1c76b42b, type: 3}
 --- !u!1 &846853844
@@ -483,7 +483,22 @@ PrefabInstance:
     - target: {fileID: 937102601209312786, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
       propertyPath: speed
-      value: 40
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102601209312786, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: increaseSpeedRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102601209312786, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: beforeBaseSpeedRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102600249579068, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: orthographic size
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbdcc28e98efe4e43830fdacd356562b, type: 3}
@@ -754,16 +769,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2024830206855196412, guid: 5a2b5697b41a53a49950e7afa33a179d,
-        type: 3}
-      propertyPath: continueButton
-      value: 
-      objectReference: {fileID: 1106629699}
-    - target: {fileID: 2024830206855196412, guid: 5a2b5697b41a53a49950e7afa33a179d,
-        type: 3}
-      propertyPath: textDisplay
-      value: 
-      objectReference: {fileID: 1106629700}
     - target: {fileID: 2024830206855196413, guid: 5a2b5697b41a53a49950e7afa33a179d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -819,6 +824,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2024830206855196412, guid: 5a2b5697b41a53a49950e7afa33a179d,
+        type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 1106629699}
+    - target: {fileID: 2024830206855196412, guid: 5a2b5697b41a53a49950e7afa33a179d,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1106629700}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a2b5697b41a53a49950e7afa33a179d, type: 3}
 --- !u!1 &1825291592

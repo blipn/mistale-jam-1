@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayersHP : MonoBehaviour
 {
+    private float timeAfterDeath = 0.5f;
     [SerializeField] private ParticleSystem explosionParticles;
     private bool amDed;
     private Animator animator;
@@ -19,8 +20,9 @@ public class PlayersHP : MonoBehaviour
 
     IEnumerator Death()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(timeAfterDeath);
         Destroy(gameObject);
+        GameManager.Instance.GameOver();
     }
 
     private void uDed()
@@ -31,7 +33,6 @@ public class PlayersHP : MonoBehaviour
         m_spriteCharacter.enabled = false;
         explosionParticles.Play();
         StartCoroutine(Death());
-        GameManager.Instance.GameOver();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
