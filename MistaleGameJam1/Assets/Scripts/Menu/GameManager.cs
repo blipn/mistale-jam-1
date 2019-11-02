@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenu.activeInHierarchy && !menu.activeInHierarchy) 
+            if (pauseMenu.activeInHierarchy && !menu.activeInHierarchy && !gameOver) 
             {
                 Resume();
             }
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Resume() // TODO: sauf si gameover
+    void Resume()
     {
         isPaused = false;
         pauseMenu.SetActive(isPaused);
