@@ -39,7 +39,7 @@ public class CameraJuicy : MonoBehaviour
         transform.localRotation = originalRotation;
     }
     
-    public void ZoomWithSlowdown(Transform targetPosition, Vector3 offset, float zoom = 10f, float duration = 1f)
+    public void ZoomWithSlowdown(Transform targetPosition, Vector3 offset, float zoom = 10f, float duration = 0.5f)
     {
         StartCoroutine(zoomCamera(targetPosition, offset, zoom, duration));
     }
@@ -47,27 +47,31 @@ public class CameraJuicy : MonoBehaviour
     private IEnumerator zoomCamera(Transform targetPosition, Vector3 offset,float zoom, float duration)
     {
         Camera camera = Camera.current;
-        Transform originalPoistion = camera.transform;
+        float originalZoom = camera.orthographicSize;
+        Transform originalPosition = camera.transform;
         
         camera.transform.position = targetPosition.position + offset;
-        camera.orthographicSize = zoom;
+        
 
-        Time.timeScale = 0f;
+        Time.timeScale = 0.1f;
         float elapsed = 0f;
         
         while (elapsed < duration)
         {
             if (Time.timeScale < 1f)
                 Time.timeScale += .1f;
-
+            if (camera.orthographicSize >= 10f)
+                camera.orthographicSize = camera.orthographicSize -= .05f ;
 //            //TODO SLOW BRACKEYS 
 //            transform.localRotation = Quaternion.Lerp(originalRotation, targetRotation, Time.deltaTime * duration);
             elapsed += Time.deltaTime;
             
-            yield return null;
+            yield return new WaitForSeconds(0.02f);
         }
 
-        camera.transform.position = originalPoistion.position;
+        camera.transform.position = originalPosition.position;
+        camera.orthographicSize = originalZoom;
+
     }
 }
 

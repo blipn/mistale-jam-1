@@ -7,7 +7,7 @@ public class EnemyBehavior : MonoBehaviour
     //Il doit faire des dégâts au joueur, il doit avoir des mouvements propres, w/ rigidbody et tout le tralala
 
     public float intensityShake = 1.5f;
-    public float durationShake = 0.2f;
+    public float durationShake = 0.1f;
     
     [SerializeField] ParticleSystem explosionParticles;
     private float life = 1;
@@ -33,6 +33,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void Die()
     {
+        CameraManager.Instance.CameraJuicy.ZoomWithSlowdown(transform, new Vector3(0,0,0));
         CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
         this.GetComponent<Collider2D>().enabled = false;
         this.GetComponent<SpriteRenderer>().enabled = false;
