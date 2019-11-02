@@ -45,7 +45,8 @@ public class AmeliaMoving : MonoBehaviour
 
     private void OnDestroy()
     {
-        SaveLoad.Save("Proto");
+        GameManager.Instance.lastLevel = "Proto";
+        //SaveLoad.Save("Proto");
         GameManager.Instance.button_Play();
     }
 }

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject resumeItem;
     [SerializeField] private GameObject resetItem;
     [SerializeField] private GameObject gameOverLogo;
-    private string lastLevel; // TODO: LEVEL 1
+    public string lastLevel; // TODO: LEVEL 1
     private bool inGame = false;
     private bool gameOver = false;
     
@@ -92,10 +92,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ReloadScene()
+    private void ReloadScene(bool changeLevel = false)
     {
         Resume();
-        SceneManager.UnloadSceneAsync(lastLevel);
+        if (changeLevel)
+            SceneManager.UnloadSceneAsync("SceneAlex");
+        else
+            SceneManager.UnloadSceneAsync(lastLevel);
         SceneManager.LoadScene(lastLevel, LoadSceneMode.Additive);
     }
 
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            ReloadScene();
+            ReloadScene(true);
         }
     }
 
