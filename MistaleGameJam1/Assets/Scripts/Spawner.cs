@@ -8,10 +8,12 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform obstaclesThatYouMustCrouchSpawnPoint;
     [SerializeField] private Transform enemiesSpawnPoint;
     [SerializeField] private Transform obstaclesSpawnPoint;
+    [SerializeField] private Transform holeSpawnPoint;
     
     [SerializeField] private List<GameObject> obstacles;
     [SerializeField] private List<GameObject> enemies;
     [SerializeField] private List<GameObject> obstaclesThatYouMustCrouch;
+    [SerializeField] private List<GameObject> holes;
 
     private float cd = 3f;
 
@@ -31,15 +33,19 @@ public class Spawner : MonoBehaviour
         cd -= .1f;
         RandomList();
         GameObject go = randomListObstacle[Random.Range(0, randomListObstacle.Count)];
-        
-        Instantiate(go, (randomSpawn.position + new Vector3(0, go.GetComponent<BoxCollider2D>().size.y/2, 0)), Quaternion.identity);
+        Vector3 offset = new Vector3(0,0,0);
+        if (!holes.Exists(x => go))
+        {
+            offset = new Vector3(0, go.GetComponent<BoxCollider2D>().size.y / 2, 0);
+        }
+        Instantiate(go, (randomSpawn.position + offset), Quaternion.identity);
         StartCoroutine(SpawningManager());
     }
 
     private void RandomList()
     {
 //        int choice = Random.Range(0, 3);
-        int choice = 0;
+        int choice = 3;
         switch (choice)
         {
             case 0:
@@ -53,6 +59,10 @@ public class Spawner : MonoBehaviour
             case 2:
                 randomSpawn = obstaclesThatYouMustCrouchSpawnPoint;
                 randomListObstacle = obstaclesThatYouMustCrouch;
+                break;
+            case 3:
+                randomSpawn = holeSpawnPoint;
+                randomListObstacle = holes;
                 break;
         }
     }

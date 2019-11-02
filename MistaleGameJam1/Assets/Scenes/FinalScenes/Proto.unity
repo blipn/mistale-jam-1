@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404766631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1483, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1670514286}
@@ -269,6 +269,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1670514286}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &723611021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 723611022}
+  m_Layer: 0
+  m_Name: SpawnPointHole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &723611022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723611021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.204, y: -0.247, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670514286}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846853844
 GameObject:
@@ -499,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 937102601209312787, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.9
+      value: 16.37
       objectReference: {fileID: 0}
     - target: {fileID: 937102601209312787, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
@@ -551,6 +581,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 937102600933046944, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937102600852800054, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420958592628682640, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 937102601209312786, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
       propertyPath: speed
@@ -570,6 +615,16 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8158634389500734614, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717100535267109233, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbdcc28e98efe4e43830fdacd356562b, type: 3}
@@ -807,6 +862,7 @@ Transform:
   - {fileID: 719024564}
   - {fileID: 404766632}
   - {fileID: 1936879359}
+  - {fileID: 723611022}
   m_Father: {fileID: 1852627036}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -825,17 +881,15 @@ MonoBehaviour:
   obstaclesThatYouMustCrouchSpawnPoint: {fileID: 719024564}
   enemiesSpawnPoint: {fileID: 404766632}
   obstaclesSpawnPoint: {fileID: 1936879359}
+  holeSpawnPoint: {fileID: 723611022}
   obstacles:
   - {fileID: 7207589528306244278, guid: 6a3c25bc3c3db9240901708da817b181, type: 3}
   enemies:
   - {fileID: 7207589528306244278, guid: 6a3c25bc3c3db9240901708da817b181, type: 3}
-  - {fileID: 7207589528306244278, guid: 8878312de58ac3549801252c9778de3e, type: 3}
-  - {fileID: 7207589528306244278, guid: fa83823f8366600469a364240daf2fd2, type: 3}
-  - {fileID: 7207589528306244278, guid: 049a3a5af65644f4e9f55f1744a5c079, type: 3}
-  - {fileID: 7207589528306244278, guid: 047fce3e832f2a24ab11c7bf385900fe, type: 3}
-  - {fileID: 7207589528306244278, guid: e13c3c89cddf57a4a9aef0ce00fe4912, type: 3}
   obstaclesThatYouMustCrouch:
-  - {fileID: 7207589528306244278, guid: 3cd1c579aaded294698b243700331fcb, type: 3}
+  - {fileID: 7207589528306244278, guid: 8878312de58ac3549801252c9778de3e, type: 3}
+  holes:
+  - {fileID: 7207589528306244278, guid: 6d682e0fec8bbda4b8d3164f7859787f, type: 3}
 --- !u!1001 &1815595678
 PrefabInstance:
   m_ObjectHideFlags: 0
