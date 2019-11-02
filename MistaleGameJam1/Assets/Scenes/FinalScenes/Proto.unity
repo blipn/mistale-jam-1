@@ -485,6 +485,11 @@ PrefabInstance:
       propertyPath: speed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 937102600249579068, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: orthographic size
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbdcc28e98efe4e43830fdacd356562b, type: 3}
 --- !u!1001 &1106629698
