@@ -30,6 +30,7 @@ public class Obstacle : MonoBehaviour
         
         if (CameraManager.Instance != null)
         {
+            CameraManager.Instance.CameraJuicy.ZoomWithSlowdown(this.transform, new Vector3(0,0,0));
             CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
             
         }
