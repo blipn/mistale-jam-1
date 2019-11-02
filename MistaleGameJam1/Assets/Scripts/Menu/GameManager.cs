@@ -163,6 +163,7 @@ public class GameManager : MonoBehaviour
     {
         SetupGameOver(false);
         ReloadScene();
+        button_Play();
     }
 
     private void ExitTheGame()
