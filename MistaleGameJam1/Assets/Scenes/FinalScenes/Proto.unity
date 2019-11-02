@@ -415,6 +415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraAvecParallax
       objectReference: {fileID: 0}
+    - target: {fileID: 937102601209312791, guid: fbdcc28e98efe4e43830fdacd356562b,
+        type: 3}
+      propertyPath: m_TagString
+      value: BorderCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 937102601209312787, guid: fbdcc28e98efe4e43830fdacd356562b,
         type: 3}
       propertyPath: m_LocalPosition.x
