@@ -42,6 +42,8 @@ public class Obstacle : MonoBehaviour
 
     private void Die()
     {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponent<Collider2D>().enabled = false;
         isDed = true;
         explosionParticles.Play();
 //        CameraManager.Instance.CameraJuicy.rotation(-3f, .2f);
