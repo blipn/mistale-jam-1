@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 1988661650346881322, guid: cab4b7ffade0eb445875dffb1c76b42b,
+        type: 3}
+      propertyPath: animJump
+      value: 
+      objectReference: {fileID: 2096913546}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab4b7ffade0eb445875dffb1c76b42b, type: 3}
 --- !u!4 &147703857 stripped
@@ -205,6 +210,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 147703856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &404766631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404766632}
+  m_Layer: 0
+  m_Name: SpawnPointEnemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404766632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404766631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670514286}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &719024563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 719024564}
+  m_Layer: 0
+  m_Name: SpawnPointCrouch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &719024564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719024563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670514286}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846853844
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +803,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.57, y: -0.635, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 719024564}
+  - {fileID: 404766632}
+  - {fileID: 1936879359}
   m_Father: {fileID: 1852627036}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -754,15 +822,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f727401a1f74bc49be19a208529b012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstaclesThatYouMustCrouchSpawnPoint: {fileID: 719024564}
+  enemiesSpawnPoint: {fileID: 404766632}
+  obstaclesSpawnPoint: {fileID: 1936879359}
   obstacles:
+  - {fileID: 7207589528306244278, guid: 6a3c25bc3c3db9240901708da817b181, type: 3}
+  enemies:
   - {fileID: 7207589528306244278, guid: 6a3c25bc3c3db9240901708da817b181, type: 3}
   - {fileID: 7207589528306244278, guid: 8878312de58ac3549801252c9778de3e, type: 3}
   - {fileID: 7207589528306244278, guid: fa83823f8366600469a364240daf2fd2, type: 3}
   - {fileID: 7207589528306244278, guid: 049a3a5af65644f4e9f55f1744a5c079, type: 3}
   - {fileID: 7207589528306244278, guid: 047fce3e832f2a24ab11c7bf385900fe, type: 3}
   - {fileID: 7207589528306244278, guid: e13c3c89cddf57a4a9aef0ce00fe4912, type: 3}
-  - {fileID: 7207589528306244278, guid: bc131c7b52144104b8e2214ab5f75e52, type: 3}
-  - {fileID: 7207589528306244278, guid: 0dc9b89ea97097b4ea7c7ffadff8a4b7, type: 3}
+  obstaclesThatYouMustCrouch:
+  - {fileID: 7207589528306244278, guid: 3cd1c579aaded294698b243700331fcb, type: 3}
 --- !u!1001 &1815595678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -929,6 +1002,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 899831741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1936879358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936879359}
+  m_Layer: 0
+  m_Name: SpawnPointObstacle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936879359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936879358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670514286}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2096913544
 GameObject:
   m_ObjectHideFlags: 0
