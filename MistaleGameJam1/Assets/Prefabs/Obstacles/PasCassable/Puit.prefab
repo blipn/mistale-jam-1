@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5872967985394373115}
   - component: {fileID: 40868290838135272}
   - component: {fileID: 2549209784567145172}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6548183529733247657}
   - component: {fileID: 3561856846819029759}
   - component: {fileID: 1989079425393683954}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,12 +185,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7207589528306244274}
-  - component: {fileID: 7207589528306244268}
   - component: {fileID: 7207589528306244279}
   - component: {fileID: 5632350445474730349}
-  m_Layer: 10
-  m_Name: Cassable
-  m_TagString: Obstacle
+  m_Layer: 0
+  m_Name: PasCassable 1
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,22 +210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7207589528306244268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7207589528306244278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379540604da7cd4488ab7575627ddb93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticles: {fileID: 3852081840106534144}
-  life: 1
-  intensityShake: 1
-  durationShake: 0.1
 --- !u!61 &7207589528306244279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,9 +225,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 2.01, y: 1.8}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -291,7 +274,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: ed2b0ac11775be042a17a92c75ef0075, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -379,12 +362,6 @@ PrefabInstance:
 --- !u!4 &3852081840106534147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5471231014070254013}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &3852081840106534144 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 9122304484180593853, guid: 228964baee558d74a8cf80eceda94ac3,
     type: 3}
   m_PrefabInstance: {fileID: 5471231014070254013}
   m_PrefabAsset: {fileID: 0}
