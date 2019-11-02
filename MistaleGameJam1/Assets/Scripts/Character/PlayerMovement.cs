@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
     public Animator animAttack;
     public BoxCollider2D fieldAttack;
-
+    public Animator jumpAnimator;
+    
     public float runSpeed = 40f;
 
     public AudioSource sfAttack;
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour {
                     canPlayJump = false;
                     sfJump.Play();
                     jumpParticule.Play();
+                    jumpAnimator.Play("jumpAnimation");
                 }
             }
 
