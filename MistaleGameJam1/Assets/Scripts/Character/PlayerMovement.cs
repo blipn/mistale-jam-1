@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour {
 
             yield return new WaitForSeconds(m_AttackSpeed);
             m_canAttack = true;
+            sfAttack.mute = false;
         }
     }
     
