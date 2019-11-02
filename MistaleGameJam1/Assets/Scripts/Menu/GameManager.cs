@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject resumeItem;
     [SerializeField] private GameObject resetItem;
     [SerializeField] private GameObject gameOverLogo;
-    private string lastLevel = "Proto"; // TODO: LEVEL 1
+    private string lastLevel; // TODO: LEVEL 1
     private bool inGame = false;
     private bool gameOver = false;
     
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instance = this;
+        lastLevel = SaveLoad.Load();
         Time.timeScale = 1f;
     }
 
@@ -153,6 +154,11 @@ public class GameManager : MonoBehaviour
     public void button_Reset()
     {
         StartCoroutine(selector(GameOver));
+    }
+    
+    public void button_Reset_Save()
+    {
+        SaveLoad.Reset();
     }
     
     public void button_Exit()
