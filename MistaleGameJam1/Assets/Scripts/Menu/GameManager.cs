@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused) 
+            if (pauseMenu.activeInHierarchy && !menu.activeInHierarchy) 
             {
                 Resume();
             }
