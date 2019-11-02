@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,10 @@ public class PlayerMovement : MonoBehaviour {
     public BoxCollider2D fieldAttack;
 
     public float runSpeed = 40f;
+
     public AudioSource sfAttack;
+    public AudioSource sfJump;
+    public AudioSource sfCrouchSlide;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -21,6 +25,8 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D m_rgPlayer;
     bool m_canAttack = true;
     [SerializeField] float m_AttackSpeed = 0.3f;
+    bool canPlayJump = true;
+
     private void Start()
     {
         m_rgPlayer = gameObject.GetComponent<Rigidbody2D>();
@@ -40,7 +46,13 @@ public class PlayerMovement : MonoBehaviour {
             {
                 jump = true;
                 animator.SetBool("IsJumping", true);
-                jumpParticule.Play();
+
+                if (canPlayJump)
+                {
+                    canPlayJump = false;
+                    sfJump.Play();
+                    jumpParticule.Play();
+                }
             }
 
             if (Input.GetButtonDown("Fire1"))
@@ -52,17 +64,20 @@ public class PlayerMovement : MonoBehaviour {
             if (Input.GetButtonDown("Crouch"))
             {
                 crouch = true;
+                if (animator.GetFloat("Speed") > 0.01)
+                    sfCrouchSlide.Play();
             }
             else if (Input.GetButtonUp("Crouch"))
             {
                 crouch = false;
-            }
+            }            
         }        
     }
 
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
+        canPlayJump = true;
     }
 
     public void OnCrouching(bool isCrouching)
@@ -117,5 +132,4 @@ public class PlayerMovement : MonoBehaviour {
             sfAttack.mute = false;
         }
     }
-    
 }
