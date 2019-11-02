@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject resumeItem;
     private string lastLevel = "Proto"; // TODO: LEVEL 1
     private bool inGame = false;
+    public bool gameOver = false;
     
     // Start is called before the first frame update
     void Start()
@@ -32,19 +33,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {/*
-            if (isPaused)
+        {
+            if (isPaused) 
             {
                 Resume();
             }
             else
             {
                 Pause();
-            }*/
+            }
         }
     }
 
-    void Resume()
+    void Resume() // TODO: sauf si gameover
     {
         isPaused = false;
         pauseMenu.SetActive(isPaused);
@@ -53,14 +54,19 @@ public class GameManager : MonoBehaviour
     
     void Pause() {
         isPaused = true;
+        if (gameOver)
+        {
+            // TODO: modifier menu
+        }
         pauseMenu.SetActive(isPaused);
         Time.timeScale = 0f;
     }
 
     public void GameOver()
     {
+        gameOver = true;
         // TODO: Fade
-        ReloadScene();
+        Pause();
     }
 
     private void ReloadScene()
@@ -129,6 +135,11 @@ public class GameManager : MonoBehaviour
     public void button_Exit()
     {
         ExitTheGame();
+    }    
+    
+    public void button_Replay()
+    {
+        ReloadScene();
     }
 
     private void ExitTheGame()
