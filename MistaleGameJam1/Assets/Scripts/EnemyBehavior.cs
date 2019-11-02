@@ -33,7 +33,8 @@ public class EnemyBehavior : MonoBehaviour
 
     void Die()
     {
-        CameraManager.Instance.CameraJuicy.ZoomWithSlowdown(transform, new Vector3(0,0,0));
+//        CameraManager.Instance.CameraJuicy.ZoomWithSlowdown(transform, new Vector3(0,0,0));
+        TimeManager.Instance.BulletTime();
         CameraManager.Instance.CameraShake.Shake(durationShake, intensityShake);
         this.GetComponent<Collider2D>().enabled = false;
         this.GetComponent<SpriteRenderer>().enabled = false;
