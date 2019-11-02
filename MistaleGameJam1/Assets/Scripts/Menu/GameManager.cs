@@ -19,9 +19,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playItem;
     [SerializeField] private GameObject menuInGame;
     [SerializeField] private GameObject resumeItem;
+    [SerializeField] private GameObject resetItem;
+    [SerializeField] private GameObject gameOverLogo;
     private string lastLevel = "Proto"; // TODO: LEVEL 1
     private bool inGame = false;
-    public bool gameOver = false;
+    private bool gameOver = false;
     
     // Start is called before the first frame update
     void Start()
@@ -64,9 +66,28 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameOver = true;
         // TODO: Fade
+        SetupGameOver(true);
         Pause();
+    }
+
+    private void SetupGameOver(bool show)
+    {
+        if (show)
+        {
+            gameOver = true;
+            resumeItem.SetActive(false);
+            resetItem.SetActive(true);
+            gameOverLogo.SetActive(true);
+            resetItem.GetComponent<Button>().Select();
+        }
+        else
+        {
+            gameOver = false;
+            resumeItem.SetActive(true);
+            resetItem.SetActive(false);
+            gameOverLogo.SetActive(false);
+        }
     }
 
     private void ReloadScene()
@@ -139,6 +160,7 @@ public class GameManager : MonoBehaviour
     
     public void button_Replay()
     {
+        SetupGameOver(false);
         ReloadScene();
     }
 
