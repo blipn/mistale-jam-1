@@ -29,13 +29,17 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(Mathf.Max(cd,1.5f));
         cd -= .1f;
-        Instantiate(obstacles[Random.Range(0,randomListObstacle.Count)], randomSpawn.position, Quaternion.identity);
+        RandomList();
+        GameObject go = randomListObstacle[Random.Range(0, randomListObstacle.Count)];
+        
+        Instantiate(go, (randomSpawn.position + new Vector3(0, go.GetComponent<BoxCollider2D>().size.y/2, 0)), Quaternion.identity);
         StartCoroutine(SpawningManager());
     }
 
     private void RandomList()
     {
-        int choice = Random.Range(0, 2);
+//        int choice = Random.Range(0, 3);
+        int choice = 0;
         switch (choice)
         {
             case 0:
