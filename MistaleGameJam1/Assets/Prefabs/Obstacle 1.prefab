@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 3852081840106534144}
-  life: 2
+  life: 1
   intensityShake: 1
   durationShake: 0.1
 --- !u!61 &7207589528306244279
