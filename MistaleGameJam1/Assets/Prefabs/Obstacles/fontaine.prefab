@@ -188,8 +188,8 @@ GameObject:
   - component: {fileID: 7207589528306244279}
   - component: {fileID: 5632350445474730349}
   m_Layer: 10
-  m_Name: PasCassableKiller 1
-  m_TagString: BorderCamera
+  m_Name: fontaine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,16 +292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7207589528306244274}
     m_Modifications:
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -356,6 +346,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593852, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}

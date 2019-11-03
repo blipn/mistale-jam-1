@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         Vector3 offset = new Vector3(0,0,0);
         if (!holes.Exists(x => go))
         {
-            offset = new Vector3(0, go.GetComponent<BoxCollider2D>().size.y / 2, 0);
+            offset = new Vector3(0, go.GetComponent<SpriteRenderer>().size.y / 2, 0);
         }
         Instantiate(go, (randomSpawn.position + offset), Quaternion.identity);
         StartCoroutine(SpawningManager());

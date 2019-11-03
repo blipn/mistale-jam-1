@@ -1182,8 +1182,8 @@ MonoBehaviour:
   dialogEndIndex: 8
   dialogManager: {fileID: 842901196}
   dialogStartIndex: 5
-  interlocuteur1: {fileID: 2497958523150095148}
-  interlocuteur2: {fileID: 2497958523150095146}
+  interlocuteur1: {fileID: 2497958523150095146}
+  interlocuteur2: {fileID: 2497958523150095148}
 --- !u!58 &1474191923
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1671,7 +1671,7 @@ PrefabInstance:
     - target: {fileID: 8714966252834132337, guid: 530b7eab6372915438fbd7e0e5ff371d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 317.6
+      value: 8.900013
       objectReference: {fileID: 0}
     - target: {fileID: 8714966252834132337, guid: 530b7eab6372915438fbd7e0e5ff371d,
         type: 3}
@@ -2097,7 +2097,7 @@ PrefabInstance:
     - target: {fileID: 1988661650346881326, guid: cab4b7ffade0eb445875dffb1c76b42b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 310.9
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 1988661650346881326, guid: cab4b7ffade0eb445875dffb1c76b42b,
         type: 3}

@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: -7263830397153739088}
   m_Layer: 0
   m_Name: Sol
-  m_TagString: Ground
+  m_TagString: BorderCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.99, y: 4.22}
+  m_Size: {x: 6.77, y: 2.69}
   m_EdgeRadius: 0
 --- !u!212 &5632350445474730349
 SpriteRenderer:
@@ -309,11 +309,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7207589528306244274}
     m_Modifications:
-    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593854, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -368,6 +363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122304484180593850, guid: 228964baee558d74a8cf80eceda94ac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
       objectReference: {fileID: 0}
     - target: {fileID: 9122304484180593852, guid: 228964baee558d74a8cf80eceda94ac3,
         type: 3}
