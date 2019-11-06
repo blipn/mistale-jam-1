@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         m_stopMove = true;
         animator.SetFloat("Speed", 0f);
+        OnCrouching(false);
         m_rgPlayer.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
