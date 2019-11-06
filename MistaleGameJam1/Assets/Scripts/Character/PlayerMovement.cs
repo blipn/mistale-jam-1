@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetFloat("Speed", 0f);
         OnCrouching(false);
         m_rgPlayer.constraints = RigidbodyConstraints2D.FreezeAll;
+        m_canAttack = false;
     }
 
     public void GoMove()
@@ -92,6 +93,7 @@ public class PlayerMovement : MonoBehaviour {
         m_stopMove = false;
         m_rgPlayer.constraints = RigidbodyConstraints2D.None;
         m_rgPlayer.constraints = RigidbodyConstraints2D.FreezeRotation;
+        m_canAttack = true;
     }
 
     void FixedUpdate()

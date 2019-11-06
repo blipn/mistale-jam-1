@@ -3220,6 +3220,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 337.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2497958522318267668, guid: 0f64370377c5d1d4599c10bbbd3e0b11,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497958522318267668, guid: 0f64370377c5d1d4599c10bbbd3e0b11,
+        type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f64370377c5d1d4599c10bbbd3e0b11, type: 3}
 --- !u!1 &2497958523150095146 stripped
