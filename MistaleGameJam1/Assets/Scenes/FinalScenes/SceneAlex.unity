@@ -2351,6 +2351,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: death2
       objectReference: {fileID: 0}
+    - target: {fileID: 1398572815, guid: cab4b7ffade0eb445875dffb1c76b42b, type: 3}
+      propertyPath: m_Size.y
+      value: 28.97
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab4b7ffade0eb445875dffb1c76b42b, type: 3}
 --- !u!1 &1935726319

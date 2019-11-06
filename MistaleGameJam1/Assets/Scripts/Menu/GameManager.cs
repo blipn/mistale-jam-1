@@ -190,5 +190,10 @@ public class GameManager : MonoBehaviour
     {
         playItem.GetComponent<Button>().Select();
     }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     
 }
