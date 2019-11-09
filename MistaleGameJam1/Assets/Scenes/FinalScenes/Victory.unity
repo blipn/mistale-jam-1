@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -131,41 +131,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 6105491322386387216}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: playItem
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: menuInGame
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 6105491322031920142}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: resumeItem
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: resetItem
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
-        type: 3}
-      propertyPath: gameOverLogo
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5166294458885860999, guid: 3316b8edc1f234342b4c21aadbdea68f,
         type: 3}
@@ -221,6 +186,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 6105491322386387216}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: playItem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: menuInGame
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 6105491322031920142}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: resumeItem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: resetItem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166294458885860998, guid: 3316b8edc1f234342b4c21aadbdea68f,
+        type: 3}
+      propertyPath: gameOverLogo
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3316b8edc1f234342b4c21aadbdea68f, type: 3}
@@ -333,9 +333,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You won....
+  m_text: 'You fleed
 
-    But at what cost ?'
+    You are no knight
+
+    You are a <color="red"><b>traitor</b></color>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -404,12 +406,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1510.326, w: 0}
   m_textInfo:
     textComponent: {fileID: 944297707}
-    characterCount: 30
+    characterCount: 45
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 6
+    spaceCount: 9
+    wordCount: 10
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
