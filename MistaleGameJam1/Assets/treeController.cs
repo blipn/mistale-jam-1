@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ondestroyTree : treeController
+public class treeController : Obstacle
 {
-    public GameObject ameliaDead;
-    
+
+    protected Animator _animator;
+    // Start is called before the first frame update
+    void Start()
+    {
+        _animator = this.GetComponent<Animator>();
+    }
+
     override protected void Die()
     {
-        PlayerPrefs.SetInt("tutorialDone", 1);
-        ameliaDead.SetActive(true);
         _animator.SetBool("isFalling", true);
         StartCoroutine(uDed(1.5f));
     }

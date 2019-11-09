@@ -9,9 +9,9 @@ public class Obstacle : MonoBehaviour
     private bool isDed;
     public int life = 2;
 
-    IEnumerator uDed()
+    protected IEnumerator uDed(float secondsWaiting)
     {
-        yield return new WaitForSeconds(durationShake);
+        yield return new WaitForSeconds(secondsWaiting);
         Destroy(gameObject);
     }
     
@@ -41,14 +41,19 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    private void Die()
+    protected void Hide()
     {
         this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<Collider2D>().enabled = false;
+    }
+
+    protected virtual void Die()
+    {
+        Hide();
         isDed = true;
         explosionParticles.Play();
 //        CameraManager.Instance.CameraJuicy.rotation(-3f, .2f);
-        StartCoroutine(uDed());
+        StartCoroutine(uDed(durationShake));
         
     }
 }
