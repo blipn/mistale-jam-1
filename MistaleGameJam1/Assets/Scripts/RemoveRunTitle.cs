@@ -7,11 +7,11 @@ public class RemoveRunTitle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke(nameof(DestroyThis), 5);
+        Invoke(nameof(Hide), 5);
     }
 
-    private void DestroyThis()
+    private void Hide()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

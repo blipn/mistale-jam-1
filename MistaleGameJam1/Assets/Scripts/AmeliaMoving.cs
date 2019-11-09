@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AmeliaMoving : MonoBehaviour
 {
@@ -45,8 +46,6 @@ public class AmeliaMoving : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.Instance.lastLevel = "Proto";
-        //SaveLoad.Save("Proto");
-        GameManager.Instance.button_Play();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

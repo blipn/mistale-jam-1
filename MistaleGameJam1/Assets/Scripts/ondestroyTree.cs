@@ -9,6 +9,7 @@ public class ondestroyTree : MonoBehaviour
 
     private void OnDestroy()
     {
+        PlayerPrefs.SetInt("tutorialDone", 1);
         ameliaDead.SetActive(true);
     }
 }

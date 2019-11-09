@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayersHP : MonoBehaviour
 {
@@ -21,8 +22,7 @@ public class PlayersHP : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(timeAfterDeath);
-        Destroy(gameObject);
-        GameManager.Instance.GameOver();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void uDed()
