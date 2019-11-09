@@ -223,6 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2193e7ad43022c4f9a1f11c25110a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intensityShake: 1.5
+  durationShake: 0.1
   explosionParticles: {fileID: 3852081840106534144}
 --- !u!61 &7207589528306244279
 BoxCollider2D:
@@ -267,7 +269,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 633aecf87ef8d9c43812fe5c79a3ddbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,8 +287,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2041335687
+  m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

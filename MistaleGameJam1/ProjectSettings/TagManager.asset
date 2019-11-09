@@ -54,11 +54,11 @@ TagManager:
   - name: ParralaxHouseForeGround
     uniqueID: 1013369773
     locked: 0
-  - name: Game
-    uniqueID: 2253631609
-    locked: 0
   - name: Player
     uniqueID: 1355938667
+    locked: 0
+  - name: Game
+    uniqueID: 2253631609
     locked: 0
   - name: UI
     uniqueID: 1020185755

@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90a744f6e407d84bb403bf768e57687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogManager: {fileID: 0}
-  dialogStartIndex: 0
+  isScrollingStarterPanel: 0
   dialogEndIndex: 4
+  dialogManager: {fileID: 0}
+  dialogStartIndex: 0
   interlocuteur1: {fileID: 0}
   interlocuteur2: {fileID: 0}
 --- !u!212 &374630246884604219
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
