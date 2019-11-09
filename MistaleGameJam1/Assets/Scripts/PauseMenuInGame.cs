@@ -25,7 +25,7 @@ public class PauseMenuInGame : MonoBehaviour
         }
     }
 
-    private void Pause()
+    public void Pause()
     {
         Time.timeScale = 0f;
         isPaused = true;
@@ -36,7 +36,7 @@ public class PauseMenuInGame : MonoBehaviour
         }
     }
 
-    private void Resume()
+    public void Resume()
     {
         Time.timeScale = 1f;
         isPaused = false;
